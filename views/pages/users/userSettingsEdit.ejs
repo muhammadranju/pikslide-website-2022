@@ -1,0 +1,179 @@
+<!-- Navbar-->
+<%- include('../partials/header.ejs') %>
+<!-- Navbar-->
+<!-- Main Section -->
+<style>
+    #upLabel {
+        cursor: pointer;
+    }
+</style>
+<div class="container mt-4 pb-3">
+    <div class="bg-light box-shadowf-lg  overflow-hidden">
+        <div class="row">
+
+            <!-- Sidebar-->
+            <%- include('./userSidebar/userSidebar.ejs') %>
+            <!-- Sidebar-->
+
+            <!-- Content-->
+            <section class="col-lg-10 ">
+                <div class="pt-2 px-4 pl-lg-0 pr-xl-5">
+                    <div class=" mt-2 alert alert-success  alert-dismissible fade show" role="alert" id="alerts"
+                        font-size-sm" role="alert">
+                        <strong> Your information has been successfully updated</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <h2 class="font-weight-bold py-2 text-center text-sm-left">Update Settings</h2>
+                    <hr class="mb-2">
+                    <!-- Tabs-->
+
+                    <!-- Tab content-->
+                    <div class="tab-content">
+                        <!-- Profile-->
+                        <form action="/uploads/profile">
+                            <div class="tab-pane fade show active mt-4" id="profile" role="tabpanel">
+                                <div class="bg-secondary rounded-lg p-4 mb-4 ">
+                                    <div class="media align-items-center">
+                                        <img data-src="<%=user.profilePics%>" id="profilePics"
+                                            src="<%=user.profilePics%>" class="img-thumbnail rounded-circle lazyload"
+                                            width="80" alt="Pikslide Studio">
+                                        <div class="media-body pl-3">
+                                            <button class="btn btn-light btn-shadow btn-sm mb-2" type="button">
+                                                <input type="file" class="btn btn-light bg-light border-0" hidden
+                                                    id="upload" name='profilePics'>
+                                                <label for="upload" id="upLabel">
+                                                    <i class="czi-loading mr-2" for="upload"></i>Change avatar
+                                                </label>
+
+                                            </button>
+                                            <div class="p mb-0 font-size-ms text-muted">
+                                                Upload JPG, GIF or PNG image.300 x 300 required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <strong class="pb-5">Profile Details</strong>
+                                <hr class="mb-3 mt-2">
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="">Your Username</label>
+                                            <input class="form-control" type="text" placeholder="Username"
+                                                value="<%=user.username%>">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="">Name</label>
+                                            <input class="form-control" type="text" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label class="">Contacts mail</label>
+                                            <input class="form-control" disabled type="text" value="<%=user.email%>"
+                                                placeholder="Your contacts mail">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <span class="">Bio</span>
+                                            <textarea class="form-control" rows="2" type="text"
+                                                placeholder="Enter Your Bio"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="pb-5 font-weight-bold">Social Profiles</span>
+                                <hr class="mb-3 mt-2">
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Website URL</label>
+                                            <input class="form-control" type="text"
+                                                placeholder="Your Website profile url">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Facebook URL</label>
+                                            <input class="form-control" type="text"
+                                                placeholder="Your Facebook profile url">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Instagram URL</label>
+                                            <input class="form-control" type="text"
+                                                placeholder="Your Instagram profile url">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Twitter URL</label>
+                                            <input class="form-control" type="text"
+                                                placeholder="Your Twitter profile url">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Dribbble URL</label>
+                                            <input class="form-control" type="text"
+                                                placeholder="Your Dribbble profile url">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Behance URL</label>
+                                            <input class="form-control" type="text"
+                                                placeholder="Your Behance profile url">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <span class="pb-5 font-weight-bold">Profile Connections</span>
+                                <hr class="mb-3 mt-2">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="">Behance URL</label>
+                                            <button class="btn btn-primary" type="button">Connect</button>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <div class="col-12">
+                                    <div class="d-flex flex-wrap justify-content-end align-items-center">
+                                        <!-- <div class="custom-control custom-checkbox d-block">
+                                            <input class="custom-control-input" type="checkbox" id="freelancer" checked>
+                                            <label class="custom-control-label" for="freelancer">I'm available for
+                                                freelance</label>
+                                        </div> -->
+                                        <input class="btn btn-primary font-weight-bold btn-sm  mb-3" type="submit"
+                                            value="Update">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </div>
+</div>
+<!-- </div> -->
+
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+   "name": "pikslide",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "nodemon app.js",
+      "prod": "NODE_ENV=production node app.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "bcrypt": "^5.0.1",
+      "config": "^3.3.6",
+      "connect-flash": "^0.1.1",
+      "connect-mongodb-session": "^3.0.0",
+      "dotenv": "^10.0.0",
+      "ejs": "^3.1.6",
+      "express": "^4.17.1",
+      "express-session": "^1.17.2",
+      "express-validator": "^6.12.1",
+      "mongoose": "^5.13.5",
+      "morgan": "^1.10.0",
+      "multer": "^1.4.3"
+   }
+}

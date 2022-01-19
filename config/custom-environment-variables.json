@@ -1,0 +1,5 @@
+{
+   "server_port": "8080",
+   "mongodb_uri": "MONGOBD_URI",
+   "secret_key": "SECRET_KEY"
+}

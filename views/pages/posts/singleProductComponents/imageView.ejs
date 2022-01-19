@@ -1,0 +1,196 @@
+<section class="container mb-3 pb-3">
+    <div class="bg-light rounded-lg overflow-hidden">
+        <div class="row">
+            <!-- Content-->
+            <section class="col-lg-8 pt-2 pt-lg-4 pb-4 mb-lg-3 ">
+                <div class="pt-2 px-4 pr-lg-0 pl-xl-5">
+
+                    <!-- Product gallery-->
+                    <div class="cz-gallery d-flex ">
+                        <div class="row">
+                            <% for(let i=0; i<4; i++){ %>
+                            <div class="col-sm-6">
+                                <a class="gallery-item rounded-lg mb-grid-gutter" href="javascript:;"
+                                    data-toggle="modal" data-target="#exampleModal">
+                                    <img class="lazyload" src="/images/lazyload/pikslide-lazyload.jpg"
+                                        data-src="/images/marketplace/products/03.jpg" alt="Gallery preview" />
+                                    <span class="gallery-item-caption">UI Psd iPhone X Monochrome</span>
+                                </a>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist + Sharing-->
+                    <div class="d-flex flex-wrap justify-content-between align-items-center border-top pt-3 mt-5">
+                        <div class="py-2 mr-2">
+
+                            <button class="btn btn-danger btn-shadow btn-sm" type="button">
+                                <i class="czi-heart font-size-lg mr-2"></i>Like
+                            </button>
+
+
+                            <button class="btn btn-primary btn-sm btn-shadow" type="button">Save
+                            </button>
+
+                        </div>
+                        <div class="py-2">
+
+                            <a class="social-btn sb-outline sb-facebook sb-sm ml-2" href="#">
+                                <i class="czi-facebook"></i>
+                            </a>
+                            <a class="social-btn sb-outline sb-twitter sb-sm ml-2" href="#">
+                                <i class="czi-twitter"></i>
+                            </a>
+                            <a class="social-btn sb-outline sb-pinterest sb-sm ml-2" href="#">
+                                <i class="czi-pinterest"></i>
+                            </a>
+                            <a class="social-btn sb-outline sb-instagram sb-sm ml-2" href="#">
+                                <i class="czi-instagram"></i>
+                            </a>
+                            <a class="social-link sb-sm ml-2" href="#">
+                                <i class="czi-share-alt font-size-lg align-middle text-muted mr-2"></i>
+                            </a>
+                            <% if(isLogin){ %>
+                            <a class="social-link sb-sm ml-2" href="/users/edit-post">
+                                <i class="fas fa-ellipsis-v font-size-lg align-middle text-muted mr-2"></i>
+                            </a>
+                            <% } %>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- Sidebar-->
+            <aside class="col-lg-4">
+                <hr class="d-lg-none">
+                <div class="cz-sidebar-static h-100 ml-auto border-left">
+                    <div class="accordion" id="licenses">
+                        <div class="card border-top-0 border-left-0 border-right-0">
+                            <div class="card-header d-flex justify-content-between align-items-center  border-0">
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="license" id="license-std"
+                                        checked>
+                                    <label class="custom-control-label font-weight-bold text-dark" for="license-std"
+                                        data-toggle="collapse" data-target="#standard-license">
+                                        Monthly Subscribe
+                                    </label>
+                                </div>
+                                <h5 class="mb-0 text-dark font-weight-normal">$8.99/m</h5>
+                            </div>
+                            <div class="collapse show" id="standard-license" data-parent="#licenses">
+                                <div class="card-body py-0 pb-2">
+                                    <ul class="list-unstyled font-size-sm">
+                                        <li class="d-flex align-items-center">
+                                            <i class="czi-check-circle text-success mr-1"> </i>
+                                            <span class="font-size-ms font-weight-bold">From $8.99 to access</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="czi-check-circle text-success mr-1"></i>
+                                            <span class="font-size-ms font-weight-bold">10,000+ resources access</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="czi-check-circle text-success mr-1"></i>
+                                            <span class="font-size-ms font-weight-bold">Resources are commercial </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-bottom-0 border-left-0 border-right-0">
+                            <div class="card-header d-flex justify-content-between align-items-center py-3 border-0">
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="license" id="license-ext">
+                                    <label class="custom-control-label font-weight-bold text-dark " for="license-ext"
+                                        data-toggle="collapse" data-target="#extended-license">
+                                        Single License
+                                    </label>
+                                </div>
+                                <h5 class="mb-0 text-dark font-weight-normal">$29.00</h5>
+                            </div>
+                            <div class="collapse" id="extended-license" data-parent="#licenses">
+                                <div class="card-body py-0 pb-2">
+                                    <ul class="list-unstyled font-size-sm">
+                                        <li class="d-flex align-items-center">
+                                            <i class="czi-check-circle text-success mr-1"></i>
+                                            <span class="font-size-ms font-weight-bold">Quality verified</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="czi-check-circle text-success mr-1"></i>
+                                            <span class="font-size-ms font-weight-bold">Use for a single project</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="czi-check-circle text-success mr-1"></i>
+                                            <span class="font-size-ms font-weight-bold">Paying users allowed</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="btn btn-primary btn-block mt-4 font-weight-bold" type="button" data-toggle="toast"
+                        data-target="#cart-toast">
+                        <i class="czi-cart font-size-lg mr-2 "></i>Download Now
+                    </button>
+                    <div class="bg-secondary rounded p-3 mt-4 mb-4">
+                        <a class="media align-items-center" href="/users/profile">
+                            <img class="rounded-circle" width="50" src="/images/team/02.jpg" alt="Sara Palson" />
+                            <div class="media-body pl-2">
+                                <span class="font-size-ms text-muted">Created by</span>
+                                <h6 class="font-size-sm mb-0 font-weight-bold">Sara Palson</h6>
+                            </div>
+                        </a></div>
+                    <!-- <div class="bg-secondary rounded p-3 mb-2">
+                        <i class="czi-download h5 text-muted align-middle mb-0 mt-n1 mr-2"></i>
+                        <span class="d-inline-block h6 mb-0 mr-1">715</span>
+                        <span class="font-size-sm">Sales</span>
+                    </div>
+                    <div class="bg-second   ary rounded p-3 mb-4">
+                        <div class="star-rating">
+                            <i class="sr-star czi-star-filled active"></i>
+                            <i class="sr-star czi-star-filled active"></i>
+                            <i class="sr-star czi-star-filled active"></i>
+                            <i class="sr-star czi-star-filled active"></i>
+                            <i class="sr-star czi-star"></i>
+                        </div>
+                        <span class="font-size-ms ml-2">4.1/5</span>
+                        <div class="font-size-ms text-muted">based on 74 reviews</div>
+                    </div> -->
+                    <ul class="list-unstyled font-size-sm">
+                        <li class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                            <span class="text-dark font-weight-medium">Last update</span>
+                            <span class="text-muted">April 27, 2019</span>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                            <span class="text-dark font-weight-medium">Released</span>
+                            <span class="text-muted">February 13, 2019</span>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                            <span class="text-dark font-weight-medium">Category</span>
+                            <a class="product-meta" href="#">Graphics</a>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                            <span class="text-dark font-weight-medium">Compatible with</span>
+                            <span class="text-muted">Photoshop CS5</span>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                            <span class="text-dark font-weight-medium">File type</span>
+                            <span class="text-muted">PSD,JPG</span>
+                        </li>
+                        <li class="d-flex justify-content-between pb-3 border-bottom">
+                            <span class="text-dark font-weight-medium">File size</span>
+                            <span class="text-muted">56MB</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+<script>
+    // $('#exampleModalCenter').on('shown.bs.modal', function () {
+    //     $('#myInput').trigger('focus')
+    // });
+</script>

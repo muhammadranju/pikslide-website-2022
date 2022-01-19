@@ -1,0 +1,76 @@
+<%- include('../partials/header.ejs') %>
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+<section class="h-100 mrg-bot ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card-wrapper col-lg-40 col-md-6">
+                <% if(flashMessage.success){ %>
+                <div class=" alert alert-danger alert-dismissible fade show" role="alert" id="alerts" font-size-sm"
+                    role="alert">
+                    <strong>Credentials Doesn't Match !</strong> Email/Password
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <% } %>
+                <div class="card fat">
+
+                    <div class="card-body ">
+                        <p class="float-right">
+                            <span class="font-size-sm">or
+                                <a href="/authentic/signup" class="font-size-sm text-hover-effect">
+                                    Create an account
+                                </a>
+                            </span>
+                        </p>
+                        <h5 class="card-title font-weight-bold mb-4">Log in</h5>
+
+                        <form class="tab-pane fade show active" method="POST" action="/authentic/login"
+                            autocomplete="off" novalidate id="signin-tab">
+                            <div class="form-group ">
+                                <i class="czi-mail"></i> <label for="si-email"> Email address</label>
+                                <input class="form-control <%= error.email?'is-invalid':'' %> " type="email" id="email"
+                                    value="<%=value.email ? value.email:""%>" name="email"
+                                    placeholder="Your email address">
+                                <div class="invalid-feedback"><%= error.email&&error.email %></div>
+                            </div>
+                            <div class="form-group password-box">
+                                <i class="czi-locked"></i> <label for="password">Password</label>
+                                <div class="">
+                                    <input class="form-control <%= error.password?'is-invalid':'' %>" type="password"
+                                        value="<%=value.password ? value.password:""%>" id="passField" name="password"
+                                        placeholder="Write your password">
+                                    <i class="far fa-eye font-size-sm" id="eye"></i>
+                                    <div class="invalid-feedback"><%= error.password&&error.password %></div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-wrap justify-content-between">
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input class="custom-control-input" type="checkbox" id="si-remember">
+                                    <label class="custom-control-label" for="si-remember">Remember me</label>
+                                </div><a class="font-size-sm text-hover-effect" href="/authentic/forgot-password">Forgot
+                                    password?</a>
+                            </div>
+                            <input type="submit" name="" value="Log in" id="loginBtn" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --------------------------------------------------------------- -->
+<!-- Main Section -->
+
+<%- include('../partials/footer.ejs') %>
+<script src="/script/passwordHide.js"></script>
+<script src="/ajax/loginAxios.js"></script>
+
+</body>
+
+</html>

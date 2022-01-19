@@ -1,0 +1,67 @@
+<!-- Navbar-->
+<%- include('../partials/header.ejs') %>
+<!-- Navbar-->
+
+<div class="container mt-4  ">
+    <div class="bg-light box-shadowf-lg  overflow-hidden">
+        <div class="row">
+
+            <!-- Sidebar-->
+            <%- include('./userSidebar/userSidebar.ejs') %>
+
+            <section class="col-lg-10 ">
+                <div class="pt-2 px-4 pl-lg-0 pr-xl-5">
+                    <h2 class="font-weight-bold py-2 text-center text-sm-left">My Email Setting</h2>
+                    <hr class="mb-3">
+                    <!-- Tabs-->
+                    <!-- Tab content-->
+                    <div class="tab-content">
+                        <!-- Profile-->
+                        <div class="tab-pane fade show active" id="profile" role="tabpanel">
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">Your Email</label>
+                                        <input class="form-control" type="text" placeholder="Your email"
+                                            value="<%=user.email%>">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label class=" font-weight-bold">Your notifications</label>
+                                    <div class="form-group">
+                                        <button class="btn btn-outline-primary btn-sm">Manage notifications</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                    <div class="custom-control custom-checkbox d-block">
+                                        <input class="custom-control-input" type="checkbox" id="freelancer" checked>
+
+                                    </div>
+                                    <button class="btn btn-primary btn-shadow mt-3 mb-3 mt-sm-0 btn-sm "
+                                        type="button">Update
+                                        setting</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </div>
+</div>
+
+
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
+
+</html>

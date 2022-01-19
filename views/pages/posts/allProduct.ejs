@@ -1,0 +1,137 @@
+<%- include('../partials/header.ejs') %>
+
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+<!-- Home icon -->
+<div class="container mt-3 mb-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">
+                    <i class="czi-home"></i>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/posts">Category</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Product</li>
+        </ol>
+    </nav>
+
+    <!-- Carousel Section -->
+    <!-- Multiple items + Static controls outside + No dots + Loop (Responsive) -->
+    <div class="cz-carousel cz-controls-sm cz-controls-static cz-controls-outside mt-3">
+        <div class="cz-carousel-inner"
+            data-carousel-options='{"items": 3, "nav": false, "responsive": {"0":{"items":1},"500":{"items":2, "gutter": 18},"768":{"items":3, "gutter": 20}, "1100":{"gutter": 24}}}'>
+            <% for(let i=0;i<4;i++){ %>
+            <a href="#">
+                <img class="lazyload" data-src="/images/marketplace/products/12.jpg"
+                    src="/images/lazyload/pikslide-lazyload.jpg" alt="...">
+            </a>
+            <% } %>
+        </div>
+    </div>
+</div>
+<!-- Carousel Section End-->
+
+<!-- Page Content-->
+<div class="container  mb-2 ">
+    <div class="row pt-1">
+        <% for( let i=0;i<36;i++){ %>
+        <!-- Product card (Grid) -->
+        <!-- Product-->
+        <div class="card product-card col-lg-3 col-md-4 col-sm-4 mt-3">
+            <a class=" " href="/posts/products">
+                <img data-src="/images/marketplace/products/08.jpg" src="/images/lazyload/pikslide-lazyload.jpg"
+                    class=" mt-3 lazyload" data-sizes="auto" alt="Product">
+            </a>
+            <div class="my-2 mx-2 ">
+                <div class="d-flex flex-wrap justify-content-between align-items-start pb-1">
+                    <div class="text-muted font-size-xs mr-1">by
+                        <a class="product-meta font-weight-bold" href="/users/profile"> Pikslide</a>
+                    </div>
+                    <div class="star-rating">
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                    </div>
+                </div>
+                <h3 class="product-title font-size-sm mb-2 ">
+                    <a href="/posts/products">Floating Phone and Tablet...</a>
+                </h3>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                <div class="mr-2">
+                    <button class="btn btn-danger btn-shadow btn-sm" type="button"><i
+                            class="czi-heart font-size-lg mr-2"></i>Like</button>
+                    <!-- <button class="btn btn-primary btn-sm btn-shadow" type="button">Save </button> -->
+                </div>
+                <div class="">
+                    <a class="social-link sb-sm ml-2" href="#">
+                        <i class="czi-share-alt font-size-lg align-middle text-muted mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>
+<!-- Page Content-->
+
+<!-- Pagination Section -->
+<div class="container pb-5 mb-2 mb-md-4 mt-5">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="Previous">
+                    <i class="czi-arrow-left"></i>
+                </a>
+            </li>
+            <li class="page-item d-sm-none">
+                <span class="page-link page-link-static">2 / 5</span>
+            </li>
+            <li class="page-item d-none d-sm-block">
+                <a href="#" class="page-link">1</a>
+            </li>
+            <li class="page-item active d-none d-sm-block" aria-current="page">
+                <span class="page-link">
+                    2
+                    <span class="sr-only">(current)</span>
+                </span>
+            </li>
+            <li class="page-item d-none d-sm-block">
+                <a href="#" class="page-link">3</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+                <a href="#" class="page-link">4</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+                <a href="#" class="page-link">5</a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="Next">
+                    <i class="czi-arrow-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- Pagination Section End -->
+
+<!-- Main Section End -->
+<!-- --------------------------------------------------------------- -->
+
+
+
+
+
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

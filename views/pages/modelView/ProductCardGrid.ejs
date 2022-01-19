@@ -1,0 +1,42 @@
+<div class="container pb-5 mb-2 mt-2 ">
+    <div class="row pt-3 mx-n2">
+        <!-- Product card (Grid) -->
+        <% for(let p of imgs){ %>
+        <div class="card product-card  col-lg-3 col-md-4 col-sm-4 mt-3 rounded-lg">
+            <a class="card-img-top d-block mb-3" href="/posts/products">
+
+                <img data-src=" <%= p.img %>" loading="lazy" src="/images/lazyload/pikslide-lazyload.jpg"
+                    class="card-img-top mt-3 lazyload" alt="Product">
+            </a>
+            <div class="my-2 mx-2 ">
+                <div class="d-flex flex-wrap justify-content-between align-items-start pb-1">
+                    <div class="text-muted font-size-xs mr-1">by
+                        <a class="product-meta font-weight-bold" href="/users/profile"><%= p.name %> </a>
+                    </div>
+                    <div class="star-rating">
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                        <i class="sr-star czi-star-filled active"></i>
+                    </div>
+                </div>
+                <h3 class="product-title font-size-md  ">
+                    <a href="/posts/products">Floating Phone and Tablet...</a>
+                </h3>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                <div class="mr-2">
+                    <button class="btn btn-danger btn-shadow btn-sm" type="button"><i
+                            class="czi-heart font-size-lg mr-2"></i>Like</button>
+                </div>
+                <div class="">
+                    <a class="social-link sb-sm ml-2" href="#">
+                        <i class="czi-share-alt font-size-lg align-middle text-muted mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>

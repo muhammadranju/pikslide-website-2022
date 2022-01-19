@@ -1,0 +1,76 @@
+<%- include('../partials/header.ejs') %>
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+<section class="h-100 mt-3 mb-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card-wrapper col-lg-40 col-md-6">
+                <div class="card fat">
+                    <div class="card-body ">
+                        <p class="float-right">
+                            <span class="font-size-sm">or
+                                <a href="/playground/login" class="font-size-sm text-hover-effect">
+                                    Login to account</a>
+                            </span>
+                        </p>
+                        <h5 class="card-title font-weight-bold mb-4">Sign up</h5>
+                        <form class="needs-validation tab-pane fade show active" method="POST" action="/playground"
+                            autocomplete="off" novalidate id="signin-tab" enctype="multipart/form-data">
+                            <div class="form-group ">
+                                <i class="czi-user"></i> <label for="si-username"> Username</label>
+                                <input class="form-control" type="text" id="username" name="username"
+                                    placeholder="Write your username">
+                                <div class="invalid-feedback">Username is required</div>
+                            </div>
+                            <div class="form-group ">
+                                <i class="czi-mail"></i> <label for="email"> Email address</label>
+                                <input class="form-control " type="email" id="email" name="email"
+                                    placeholder="Your email address">
+                                <small class="form-text text-muted font-sm">We'll verify your email.</small>
+                                <div class="invalid-feedback">Email is required</div>
+                            </div>
+                            <div class="form-group password-box">
+                                <i class="czi-locked"></i> <label for="password">Password</label>
+                                <div class="">
+                                    <input class="form-control" type="password" id="passField" name="password"
+                                        placeholder="Create your password">
+                                    <i class="far fa-eye font-size-sm" id="eye"></i>
+                                    <div class="invalid-feedback">Password is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group password-box">
+                                <i class="czi-locked"></i> <label for="confirmPassword">Confirm Password</label>
+                                <div class="">
+                                    <input class="form-control" type="password" id="passField2" name="confirmPassword"
+                                        placeholder="Write a confirm password">
+                                    <i class="far fa-eye fars font-size-sm " id="eye2"></i>
+                                    <div class="invalid-feedback">Confirm password is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-wrap justify-content-between">
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input class="custom-control-input" type="checkbox" id="si-remember">
+                                    <label class="custom-control-label" for="si-remember">I am agree with</label>
+                                    <a href="/terms-contitions" class="font-size-sm text-hover-effect font-weight-bold">
+                                        Terms and Contitions
+                                    </a>
+                                </div>
+                            </div>
+                            <input type="submit" name="submit" value="Sign up" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --------------------------------------------------------------- -->
+<!-- Main Section -->
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

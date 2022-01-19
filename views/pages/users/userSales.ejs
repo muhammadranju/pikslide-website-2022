@@ -1,0 +1,91 @@
+<!-- Navbar-->
+<%- include('../partials/header.ejs') %>
+<!-- Navbar-->
+
+
+<div class="container mt-4 pb-3">
+    <div class="bg-light box-shadowf-lg  overflow-hidden">
+        <div class="row">
+            <!-- Sidebar-->
+            <%- include('./userSidebar/userSidebar.ejs') %>
+            <!-- Sidebar-->
+            <section class="col-lg-10 pt-lg-4 pb-4 mb-3">
+                <div class="pt-2 px-4 ps-lg-0 pe-xl-5">
+                    <h2 class="font-weight-bold py-2 text-center text-sm-left">My Sales</h2>
+
+                    <div class="row mx-n2 py-2">
+                        <div class="col-sm-6 px-2 mb-4">
+                            <div class="bg-secondary h-100 rounded-3 p-4">
+                                <h3 class="h5">Your Earnings</h3>
+                                <div class="d-flex flex-wrap align-items-center py-1 mb-2">
+                                    <p class="fs-xl">Current Balance: <span
+                                            class='fw-medium font-weight-bold'>$19.4</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 px-2 mb-4">
+                            <div class="bg-secondary h-100 rounded-3 p-4">
+                                <h3 class="h5">Payout request</h3>
+                                <p class="fs-xs mb-2">Total Paid: <span class='fw-medium font-weight-bold'>$0.0</span>
+                                </p>
+                                <a class="btn btn-primary btn-sm" href="#">Request</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <h3 class="h5 pb-2">Payout history</h3>
+                    <div class="table-responsive">
+                        <table class="table table-layout-fixed fs-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>#Id</th>
+                                    <th>Product</th>
+                                    <th>Earnings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(let i=0;i<10;i++){ %>
+                                <tr>
+                                    <td>July 16</td>
+                                    <td>#1524454</td>
+                                    <td><a href="#">New Product item</a></td>
+                                    <td>$0.52</td>
+                                </tr>
+                                <% } %>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="mb-grid-gutter">
+                    <!-- Pagination-->
+                    <nav class="d-md-flex justify-content-between align-items-center text-center text-md-start"
+                        aria-label="Page navigation">
+                        <div class="d-md-flex align-items-center w-100"><span
+                                class="fs-sm text-muted me-md-3 mr-2">Showing 10 of 52 records</span>
+                            <div class="progress w-100 my-3 mx-auto mx-md-0" style="max-width: 10rem; height: 4px;">
+                                <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-sm" type="button">More records</button>
+                    </nav>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

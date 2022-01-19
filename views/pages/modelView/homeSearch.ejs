@@ -1,0 +1,39 @@
+ <% if(!isLogin){ %>
+ <style>
+     .bg-color {
+         background-color: #18b96e;
+     }
+
+     .bg-search {
+         background-color: #fafafa;
+     }
+ </style>
+ <section class="bg-color bg-size-cover bg-position-center-x position-relative py-3 mb-3 ">
+     <span class="bg-overlay bg-darker" style="opacity: .100;"></span>
+     <div class="bg-overlay-content container py-4 my-3">
+         <div class="row justify-content-center">
+             <div class="col-lg-8">
+                 <h1 class="text-light text-center">Graphic resources for everyone</h1>
+                 <p class="pb-3 text-light text-center">Find Free Vectors, Stock Photos and PSD</p>
+                 <div class="input-group-overlay input-group-lg mb-3">
+                     <div class="input-group-prepend-overlay">
+                         <span class="input-group-text"><i class="czi-search"></i></span>
+                     </div>
+                     <input class="form-control prepended-form-control" id="myInput3" type="search"
+                         placeholder="Search all resources...">
+                 </div>
+                 <div class="font-size-sm"><span class="text-light opacity-50 mr-1">Examples: </span>
+                     <a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#">Banner,</a>
+                     <a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#"> Mockup,</a>
+                     <a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#">Business
+                         card,
+                     </a>
+                     <a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#">
+                         Popular mockup
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ <% }    %>

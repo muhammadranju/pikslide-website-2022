@@ -1,0 +1,47 @@
+     <!-- Navbar Start  -->
+     <div class="navbar navbar-expand-lg navbar-light">
+         <div class="container">
+
+             <!-- Main logo  -->
+             <%- include('./headLogo') %>
+             <!-- Main logo  -->
+
+             <!-- Search for products -->
+             <%- include('./headSearch') %>
+             <!-- Search for products -->
+
+             <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                     <span class="navbar-toggler-icon"></span>
+                 </button>
+
+                 <!-- Expand men -->
+                 <a class="navbar-tool navbar-stuck-toggler my-0  mr-2" href="javascript:;">
+                     <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-menu"></i></div>
+                 </a>
+                 <!-- Expand menu -->
+
+                 <% if(!isLogin){ %>
+                 <!-- login button -->
+                 <%- include('./headLogin') %>
+                 <!-- login button -->
+                 <% } %>
+
+                 <% if(isLogin){ %>
+                 <!-- user image -->
+                 <%- include('./headUser') %>
+                 <!-- user image -->
+                 <% } %>
+
+                 <% if(isLogin){ %>
+                 <!-- <div class="navbar-tool ml-4">
+                     <a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="users/mycart">
+                         <span class="navbar-tool-label">3</span><i class="navbar-tool-icon czi-cart"></i>
+                     </a>
+                 </div> -->
+                 <% } %>
+             </div>
+
+         </div>
+
+     </div>

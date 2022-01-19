@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs') %>
+
+<!-- Quick View Modal-->
+<%- include('./singleProductComponents/modelView.ejs') %>
+<!-- Quick View Modal-->
+
+
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+<div class="container mb-3 mt-3 ">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">
+                    <i class="czi-home"></i>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/posts">Posts</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <%= title.toLocaleLowerCase() %>
+            </li>
+        </ol>
+    </nav>
+</div>
+<%- include('./singleProductComponents/imageView.ejs') %>
+<%- include('./singleProductComponents/commentSection.ejs') %>
+<%- include('./singleProductComponents/relatedProdict.ejs') %>
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!-- Navbar-->
+<%- include('../partials/header.ejs') %>
+<!-- Navbar-->
+<style>
+    .fileLabel {
+        cursor: pointer;
+    }
+</style>
+<div class="container mt-4 pb-3">
+    <div class="bg-light box-shadowf-lg  overflow-hidden">
+        <div class="row">
+
+            <!-- Sidebar-->
+            <%- include('./userSidebar/userSidebar.ejs') %>
+            <!-- Sidebar-->
+
+            <section class="col-lg-10">
+                <div class="pt-2 px-4 ps-lg-0 pe-xl-5">
+                    <!-- Title-->
+                    <div class="d-sm-flex flex-wrap justify-content-between align-items-center pb-2">
+                        <h2 class="font-weight-bold py-2 text-center text-sm-left">My Submission</h2>
+                    </div>
+                    <hr class="mb-4">
+
+                    <form class="needs-validation" autocomplete="off" novalidate action="">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="form-label font-weight-bold">Make for*</label>
+                                <select class="col-sm-12 custom-select  my-1 mr-2 fileLabel">
+                                    <option value="" disabled selected hidden>Make for category</option>
+                                    <option>Photos</option>
+                                    <option>Graphics</option>
+                                    <option>UI Design</option>
+                                    <option>Web Themes</option>
+                                    <option>Fonts</option>
+                                    <option>Add-Ons</option>
+                                </select>
+
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="form-label font-weight-bold" for="unp-product-name">In*</label>
+                                <select class="custom-select  my-1 mr-2 col-sm-12 fileLabel" name="states[]" required>
+                                    <option disabled selected hidden>Industry category</option>
+                                    <option>Photos</option>
+                                    <option>Graphics</option>
+                                    <option>UI Design</option>
+                                    <option>Web Themes</option>
+                                    <option>Fonts</option>
+                                    <option>Add-Ons</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-2 pb-2">
+                            <label class="form-label font-weight-bold" for="unp-product-name">Title*</label>
+                            <input class="form-control" type="text" id="unp-product-name" placeholder="Product titel"
+                                required>
+                            <div class="form-text">Maximum 100 characters. No HTML or emoji allowed.</div>
+                            <div class="invalid-feedback font-weight-bold">Title must be required</div>
+                        </div>
+                        <div class="mb-3 pb-2">
+                            <label class="form-label font-weight-bold" for="unp-product-description">Product
+                                Description:</label>
+                            <textarea class="form-control " placeholder="Your product description" rows="4"
+                                id="unp-product-description" required></textarea>
+                            <div class="invalid-feedback font-weight-bold">Write a must be 100 characters</div>
+                        </div>
+                        <div class="file-drop-area mb-4">
+                            <label class="form-label font-weight-bold" for="unp-standard-price">
+                                Upload product screenshot
+                            </label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input fileLabel" id="customFile" required>
+                                <label class="custom-file-label" for="customFile">Product screenshot</label>
+                                <div class="form-text">1000 x 800px ideal size for hi-res displays</div>
+                                <div class="invalid-feedback font-weight-bold">Screenshot is must required</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 mb-3">
+                                <label class="form-label font-weight-bold" for="unp-standard-price">
+                                    Standard license price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="czi-currency-exchange czi-dollar font-weight-bold"></i>
+                                    </span>
+                                    <input class="form-control" type="number" id="unp-standard-price"
+                                        placeholder="Minimum price" required>
+                                </div>
+                                <div class="form-text">Average marketplace price for this category is $15.</div>
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label class="form-label font-weight-bold" for="unp-extended-price">
+                                    Extended license price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="czi-currency-exchange czi-dollar font-weight-bold"></i>
+                                    </span>
+                                    <input class="form-control" type="number" id="unp-extended-price"
+                                        placeholder="Maximum price " required>
+                                </div>
+                                <div class="form-text">Typically 10x of the Standard license price.</div>
+                                <div class="invalid-feedback font-weight-bold">Standard license price is required</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 py-2">
+                            <label class="form-label font-weight-bold" for="unp-product-tags">Product tags</label>
+                            <textarea class="form-control" rows="1" id="unp-product-tags" placeholder="Tags"
+                                required></textarea>
+                            <div class="form-text">Up to 10 keywords that describe your item. Tags should all be in
+                                lowercase and separated by commas.
+                            </div>
+                            <div class="invalid-feedback font-weight-bold">Product tag is required</div>
+                        </div>
+                        <div class="file-drop-area mb-4">
+                            <label class="form-label font-weight-bold" for="unp-standard-price">
+                                Product files for sale
+                            </label>
+                            <div class="custom-file ">
+                                <input type="file" class="custom-file-input fileLabel" id="customFile2" required>
+                                <label class="custom-file-label " for="customFile">Source files for
+                                    sale</label>
+                                <div class="form-text">Maximum file size is 1GB</div>
+
+                                <div class="progress mt-2">
+                                    <div class="progress-bar " role="progressbar" style="width: 56%;" aria-valuenow="56"
+                                        aria-valuemin="0" aria-valuemax="100">56%
+                                    </div>
+                                </div>
+
+                                <div class="invalid-feedback font-weight-bold">Source files is required</div>
+                            </div>
+                        </div>
+                        <input type="submit" name="" value="Upload Product"
+                            class="btn btn-primary btn-shadow d-block w-100 mb-5">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

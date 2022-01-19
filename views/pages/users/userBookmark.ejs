@@ -1,0 +1,63 @@
+<!-- Navbar-->
+<%- include('../partials/header.ejs') %>
+<!-- Navbar-->
+
+<div class="container mt-4 pb-3">
+    <div class="bg-light box-shadowf-lg  overflow-hidden">
+        <div class="row">
+
+            <!-- Sidebar-->
+            <%- include('./userSidebar/userSidebar.ejs') %>
+            <!-- Sidebar-->
+            <section class="col-lg-10 pt-lg-4 pb-4 mb-3">
+                <div class=" px-4 ps-lg-0 pe-xl-5">
+                    <div class="d-sm-flex flex-wrap justify-content-between align-items-center border-bottom">
+                        <h2 class="font-weight-bold py-2 text-center text-sm-left">Bookmarks</h2>
+                        <div class="py-2">
+                            <div class="d-flex flex-nowrap align-items-center pb-3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <% for(let i=0; i<4; i++){ %>
+                    <!-- Product-->
+                    <div class="media  d-sm-flex align-items-center py-4 border-bottom">
+                        <a class=" position-relative mb-3 mb-sm-0 mr-sm-4 " href="/posts/products"
+                            style="width: 12.5rem;">
+                            <img class="rounded-lg lazyload" data-src="/images/marketplace/products/th02.jpg"
+                                src="/images/lazyload/pikslide-lazyload.jpg" alt="Product">
+                            <span class="close-floating" data-toggle="tooltip" title="Remove from Favorites">
+                                <i class="czi-close"></i>
+                            </span>
+                        </a>
+                        <div class="media-body text-center text-sm-left">
+                            <h3 class="h6 product-title mb-2">
+                                <a href="/posts/products">UI Isometric Devices Pack (PSD)
+                                </a>
+                            </h3>
+                            <a class="d-inline-block text-accent font-size-ms border-left ml-2 pl-2"
+                                href="/users/profile">by uidesigner
+                            </a>
+                            <div class=" pt-2">
+                                <button class="btn btn-primary btn-sm mx-auto mx-sm-0 my-2" type="button">
+                                    <i class="czi-cart mr-1"></i>Download Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

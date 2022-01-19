@@ -1,0 +1,42 @@
+<%- include('../partials/header.ejs') %>
+
+<!-- Main Section -->
+<!-- --------------------------------------------------------------- -->
+
+<section class="h-100 mt-3 mb-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card-wrapper col-lg-40 col-md-6">
+                <div class="card fat">
+                    <div class="card-body ">
+                        <h5 class="card-title font-weight-bold mb-4">File Upload Now</h5>
+                        <form class="needs-validation tab-pane fade show active" method="POST" action="/playground"
+                            autocomplete="off" novalidate id="signin-tab" enctype="multipart/form-data">
+                            <div class="form-group ">
+                                <i class="czi-user"></i> <label for="si-username">Upload Titel</label>
+                                <input class="form-control" type="text" id="username" name="username"
+                                    placeholder="Write your username">
+                                <div class="invalid-feedback">Titel is required</div>
+                            </div>
+                            <div class="form-group ">
+                                <i class="czi-upload"></i> <label for="si-username">Upload File</label>
+                                <input class="form-control" type="file" id="username" name="my-file"
+                                    placeholder="Write your username">
+                                <div class="invalid-feedback">File is required</div>
+                            </div>
+                            <input type="submit" name="submit" value="Upload" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --------------------------------------------------------------- -->
+<!-- Main Section -->
+
+<%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

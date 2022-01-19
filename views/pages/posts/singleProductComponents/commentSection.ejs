@@ -1,0 +1,96 @@
+    <section class="container mb-4 mb-lg-5">
+        <!-- Nav tabs-->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link p-4 active" href="#details" data-toggle="tab" role="tab">Product details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-4" href="#comments" data-toggle="tab" role="tab">Comments</a>
+            </li>
+        </ul>
+
+        <%- include('./productDetails.ejs') %>
+
+        <!-- Comments tab-->
+        <div class="tab-pane fade" id="comments" role="tabpanel">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- comment-->
+                    <div class="media py-4 border-bottom">
+                        <a href="#">
+                            <img class="rounded-circle lazyload" width="50" data-src="/images/testimonials/04.jpg"
+                                src="/images/testimonials/04.jpg" alt="Laura Willson" data-toggle="tooltip"
+                                data-placement="top" title="Laura Willson" />
+                        </a>
+                        <div class="media-body pl-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="font-size-md mb-0">Laura Willson</h6><a
+                                    class="nav-link-style font-size-sm font-weight-medium" href="#"><i
+                                        class="czi-reply mr-2"></i>Reply</a>
+                            </div>
+                            <p class="font-size-md mb-1">Lorem ipsum dolor sit amet, consectetur .</p><span
+                                class="font-size-ms text-muted"><i class="czi-time align-middle mr-2"></i>Sep 7,
+                                2019</span>
+                            <!-- comment reply-->
+                            <div class="media border-top pt-4 mt-4">
+                                <a href="#">
+                                    <img class="rounded-circle lazyload" width="50"
+                                        data-src="/images/testimonials/01.jpg" src="/images/testimonials/01.jpg"
+                                        alt="Sara Palson" data-toggle="tooltip" data-placement="top" title="Sara
+                                        Palson" />
+                                </a>
+                                <div class="media-body pl-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="font-size-md mb-0">Sara Palson</h6>
+                                    </div>
+                                    <p class="font-size-md mb-1">Egestas sed sed risus .</p><span
+                                        class="font-size-ms text-muted"><i class="czi-time align-middle mr-2"></i>Sep
+                                        13, 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- comment-->
+                    <div class="media py-4">
+                        <a href="#">
+                            <img class="rounded-circle lazyload" width="50" data-src="/images/testimonials/02.jpg"
+                                src="/images/testimonials/02.jpg" alt="Benjamin Miller" data-toggle="tooltip"
+                                data-placement="top" title="Benjamin Miller" />
+                        </a>
+                        <div class="media-body pl-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="font-size-md mb-0">Benjamin Miller</h6><a
+                                    class="nav-link-style font-size-sm font-weight-medium" href="#"><i
+                                        class="czi-reply mr-2"></i>Reply</a>
+                            </div>
+                            <p class="font-size-md mb-1">Lorem ipsum dolor sit amet.</p><span
+                                class="font-size-ms text-muted"><i class="czi-time align-middle mr-2"></i>Aug 15,
+                                2019</span>
+                        </div>
+                    </div>
+                    <!-- Post comment form-->
+                    <div class="card border-0 my-2">
+                        <div class="card-body" style="background-color: #F6F7F9;">
+                            <div class="media ">
+                                <a href="#">
+                                    <img class="rounded-circle lazyload" width="50"
+                                        data-src="/images/testimonials/04.jpg" src="/images/testimonials/04.jpg"
+                                        alt="Pikslide Studio" data-toggle="tooltip" data-placement="top" title="Laura
+                                        Willson" />
+                                </a>
+                                <form class="media-body needs-validation ml-3" novalidate>
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="4" placeholder="Write comment..."
+                                            required></textarea>
+                                        <div class="invalid-feedback">Please write your comment.</div>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm" type="submit">Post comment</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>

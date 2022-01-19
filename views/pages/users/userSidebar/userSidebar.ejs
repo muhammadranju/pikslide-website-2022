@@ -1,0 +1,85 @@
+<style>
+    body {
+        background-color: #f4f6f9;
+    }
+</style>
+<aside class="col-md-2">
+    <!-- Account menu toggler (hidden on screens larger 992px)-->
+    <div class="d-block d-lg-none p-4">
+        <a class="btn btn-outline-primary d-block" href="#account-menu" data-toggle="collapse"><i
+                class="czi-menu mr-2"></i>Account menu
+        </a>
+    </div>
+    <!-- Actual menu-->
+    <div class="cz-sidebar-static h-100 p-0" style="background-color: #f4f6f9;">
+        <div class="secondary-nav collapse" id="account-menu">
+            <ul class="list-unstyled mb-0">
+                <div class="p-4">
+                    <h3 class="font-size-md mb-0 text-muted">Account Settings</h3>
+                </div>
+                <li class=" mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold "
+                        href="/users/profile">
+                        <i class="czi-user-circle font-weight-bold mr-2"></i>
+                        Profile
+                    </a>
+                </li>
+
+                <li class="mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold" href="/users/upload">
+                        <i class=" czi-cloud-upload font-weight-bold mr-2"></i>Upload
+                    </a>
+                </li>
+                <li class="mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold"
+                        href="/users/downloads">
+                        <i class="czi-download font-weight-bold mr-2"></i>Downloads
+                    </a>
+                </li>
+
+                <li class=" mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold"
+                        href="/users/bookmark">
+                        <i class="czi-bookmark mr-2 font-weight-bold"></i>Bookmarks
+                    </a>
+                </li>
+                <li class=" mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold" href="/users/sales">
+                        <i class="czi-currency-exchange czi-dollar  mr-2 font-weight-bold"></i>My Sales
+                    </a>
+                </li>
+                <li class=" mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold"
+                        href="/users/email_setting">
+                        <i class="czi-mail font-weight-bold mr-2"></i>Email
+                    </a>
+                </li>
+                <li class=" mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold"
+                        href="/users/billing">
+                        <i class="czi-currency-exchange  mr-2 font-weight-bold"></i>Billing
+                    </a>
+                </li>
+                <li class=" mb-0">
+                    <a class="nav-link-style d-flex align-items-center mx-4 my-4 font-weight-bold "
+                        href="/users/setting">
+                        <i class="czi-settings font-weight-bold mr-2"></i>
+                        Setting
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+<script>
+    let currentLocation = location.href;
+    let menuItems = document.querySelectorAll('li a');
+    let menuLenght = menuItems.length;
+
+    for (let i = 0; i < menuLenght; i++) {
+        if (menuItems[i].href === currentLocation) {
+            menuItems[i].className = "nav-link-style d-flex align-items-center mx-4 font-weight-bold active ";
+        }
+    };
+</script>

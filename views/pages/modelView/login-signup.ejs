@@ -1,0 +1,81 @@
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class=" mt-2 mx-4">
+                    <a class="navbar-brand d-none d-sm-block mr-0 flex-shrink-0 mr-3" href="/" style="min-width: 5rem;">
+                        <img width="115" src="/images/pikslide/light-green-pikslide.png" alt="Pikslide" />
+                    </a>
+                </div>
+                <div class="modal-header">
+                    <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" href="#signin-tab" data-toggle="tab" role="tab"
+                                aria-selected="true"><i class="czi-unlocked mr-2 mt-n1"></i>Log in</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup-tab" data-toggle="tab" role="tab"
+                                aria-selected="false"><i class="czi-add-user mr-2 mt-n1"></i>Sign up</a></li>
+                    </ul>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body tab-content py-4">
+                    <form class="needs-validation tab-pane fade show active" autocomplete="off" novalidate
+                        id="signin-tab">
+                        <div class="form-group">
+                            <i class="czi-mail"></i> <label for="si-email"> Email address</label>
+                            <input class="form-control " type="email" id="si-email"
+                                placeholder="Please provide a email address" required>
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                        </div>
+                        <div class="form-group password-box">
+                            <i class="czi-locked"></i> <label for="si-password">Password</label>
+                            <div class="">
+                                <input class="form-control" type="password" id="passField"
+                                    placeholder="Please provide a password" required>
+                                <i class="far fa-eye-slash" id="eye"></i>
+                                <div class="invalid-feedback">Please provide a password.</div>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex flex-wrap justify-content-between">
+                            <div class="custom-control custom-checkbox mb-2">
+                                <input class="custom-control-input" type="checkbox" id="si-remember">
+                                <label class="custom-control-label" for="si-remember">Remember me</label>
+                            </div><a class="font-size-sm" href="#">Forgot password?</a>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-shadow" type="submit">Sign in</button>
+                    </form>
+                    <form class="needs-validation tab-pane fade" autocomplete="off" novalidate id="signup-tab">
+                        <div class="form-group">
+                            <i class="czi-user"></i> <label for="su-name">Full name</label>
+                            <input class="form-control is-invalid" type="text" id="su-name"
+                                placeholder="Please provide a full name" required>
+                            <div class="invalid-feedback">Please provide your full name.</div>
+                        </div>
+                        <div class="form-group">
+                            <i class="czi-mail"></i> <label for="su-email">Email address</label>
+                            <input class="form-control" type="email" id="su-email"
+                                placeholder="Please provide a email address" required>
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                        </div>
+                        <div class="form-group password-box">
+                            <i class="czi-locked"></i> <label for="si-password">Password</label>
+                            <div class="">
+                                <input class="form-control" type="password" id="passField2"
+                                    placeholder="Please provide a password" required>
+                                <i class="far fa-eye-slash fars" id="eye2"></i>
+                                <div class="invalid-feedback">Please provide a password.</div>
+                            </div>
+                        </div>
+                        <div class="form-group password-box">
+                            <i class="czi-locked"></i> <label for="si-password">Confirm Password</label>
+                            <div class="">
+                                <input class="form-control" type="password" id="passField3"
+                                    placeholder="Please provide a confirm password" required>
+                                <i class="far fa-eye-slash fars" id="eye3"></i>
+                                <div class="invalid-feedback">Please provide a confirm password.</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-shadow" type="submit">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
