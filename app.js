@@ -39,10 +39,14 @@ app.use((error, req, res, next) => {
 });
 
 mongoose // Mongodb datadase connection
-   .connect(config.get("mongodb_uri") || "mongodb://localhost:27017/userDB", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-   })
+   .connect(
+      config.get("mongodb_uri") ||
+         " mongodb+srv://Ranju:ranju123@cluster0.jzvet.mongodb.net/userDB?retryWrites=true&w=majority",
+      {
+         useNewUrlParser: true,
+         useUnifiedTopology: true,
+      }
+   )
    .then(() => {
       app.listen(process.env.SERVER_PORT || 5000, () => {
          console.log("Database is Connected");
