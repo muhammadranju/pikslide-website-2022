@@ -49,9 +49,9 @@ mongoose // Mongodb datadase connection
       }
    )
    .then(() => {
-      app.listen(process.env.SERVER_PORT || 5000, () => {
+      app.listen(process.env.PORT || 5000, () => {
          console.log("Database is Connected");
-         console.log(`Server is running on ${process.env.SERVER_PORT || 5000}`);
+         console.log(`Server is running on ${process.env.PORT || 5000}`);
       });
    })
    .catch((e) => {
